@@ -21,6 +21,7 @@ for file in *.ipynb
 do
     echo "Removing output from notebook $file"
     jupyter nbconvert --clear-output --inplace "$file"
+    git add "$file"
 done
 
 exit 0
